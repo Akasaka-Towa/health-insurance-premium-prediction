@@ -189,12 +189,20 @@ results["pca_linear_regression"] = {
 }
 
 plt.figure()
-plt.plot(np.cumsum(pca_pipeline.named_steps["pca"].explained_variance_ratio_))
-plt.xlabel("Number of Components")
-plt.ylabel("Cumulative Explained Variance")
-plt.title("PCA Scree Plot")
-plt.savefig(os.path.join(FIGURES_DIR, "pca_scree.png"))
+plt.scatter(y_test, y_pred, alpha=0.5, label="Predicted values")
+plt.plot(
+    [y_test.min(), y_test.max()],
+    [y_test.min(), y_test.max()],
+    'r--',
+    label="Perfect prediction"
+)
+plt.xlabel("Actual Premium")
+plt.ylabel("Predicted Premium")
+plt.title("Linear Regression: Actual vs Predicted")
+plt.legend()
+plt.savefig(os.path.join(FIGURES_DIR, "pred_vs_actual_linear.png"))
 plt.close()
+
 
 # =================================================
 # Save Results (JSON-safe)
