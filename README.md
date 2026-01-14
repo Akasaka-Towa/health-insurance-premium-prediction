@@ -1,10 +1,3 @@
-Here is the fixed and polished version of your `README.md`.
-
-I have corrected the Markdown syntax errors (specifically in the code blocks), improved the visual hierarchy with badges, organized the feature list for better readability, and added placeholders for screenshots to make your GitHub repository look professional.
-
-### **Copy and Paste the code below:**
-
-```markdown
 # Health Insurance Premium Prediction using Machine Learning
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)
